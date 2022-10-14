@@ -9,7 +9,7 @@ public class prime {
     private int length;
     private int l;
 
-    public prime(){
+    public prime(int y){
         File file = new File("primeNumbers.txt");
         try {
             if(file.createNewFile()){
@@ -28,6 +28,7 @@ public class prime {
             throw new RuntimeException(e);
         }
         l = 100000;
+        l = y;
         p = new double[l];
         length = 1;
         for(int i=0;i<l;i++){
